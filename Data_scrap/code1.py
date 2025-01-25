@@ -3,7 +3,10 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
 import pandas as pd
-
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('--chromedriver_path', type=str, help="Check where the Chromedriver is in your PC and share the path")
+args = parser.parse_args()
 def scrape_year(year, driver):
     url = f"https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title={year}"
     driver.get(url)
@@ -26,7 +29,7 @@ def scrape_year(year, driver):
     return df
 
 def main():
-    path = r"C:\Program Files (x86)\chromedriver.exe" 
+    path = args.chromedriver_path 
     service = Service(path)
     driver = webdriver.Chrome(service=service)
 
