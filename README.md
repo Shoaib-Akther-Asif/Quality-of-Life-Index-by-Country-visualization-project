@@ -2,11 +2,42 @@
 ## Problem Statement & findings
 The goal of this project is to gather and analyze quality-of-life data by country for 2025, sourced dynamically from the [Numbeo website](https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2025). This project involved scraping the data using Selenium, followed by processing and visualizing it through interactive dashboards in Tableau Public.
 
+### **Goals of This Project**
+
+1. Provide a comprehensive global perspective on various quality-of-life indices.  
+2. Identify key factors influencing the `Quality of Life Index`.  
+3. Compare different indices to determine the best country for living.  
+4. Analyze patterns of quality-of-life-related indices across different continents.  
+5. Create a heatmap to visually represent the best countries to live in.  
+
 ### The following key insights and analyses were derived using the data and presented through the Tableau Dashboard:
-1. ```Sheet name ➔ World-wide view for selected index:``` <br> A world map highlighting different indexes over time as label. From this, detailed view of information can be shown as by year and country. Its a dynamic dashboard, all country, year and inedx want to see can be select by user.User can select Multiple `country` and `year` at a time, if multiple year selected then it shows `avgerage` of selected index value.<br>
-2. ```Sheet name ➔ Correlation of different index:``` This sheet is about the `correlation` among indexes. Like prevoius user can select single or multiple value to see `Correlation` of indexes.<br>
-3. ```Sheet name ➔ Correlation with quality of life:``` From this sheet user can select year(s) to see the indexes pattern related to `Quality of life`.<br>
-4. ```Sheet name ➔ Top 20 Best Place to Live:``` This figure is about to find the best country to live (top 20). User can select single or miltiple year to find the best places to live, also can adjust the indexes. Users  can also select a index from `Select Index` option to see selected index value for selected year(s).<br>For this viz the following code is used to create a calculated field:<br>
+## Describing Tableau Dashboard and Sheets
+
+### 1. **World-wide View for Selected Index**
+A dynamic world map visualizing various indexes over time, labeled for clarity.  
+- Users can explore details by selecting specific years, countries, and indexes.  
+- Multiple countries and years can be selected, with the average index value displayed for multi-year selections.
+
+---
+
+### 2. **Correlation of Different Indexes**
+This sheet highlights correlations between various indexes.  
+- Users can select single or multiple values to analyze the relationships among the indexes dynamically.
+
+---
+
+### 3. **Correlation with Quality of Life**
+Analyze index patterns related to the `Quality of Life Index`.  
+- Users can select specific year(s) to examine how other indexes interact with quality of life over time.
+
+---
+
+### 4. **Top 20 Best Places to Live**
+This visualization identifies the top 20 countries to live in.  
+- Users can select single or multiple years to refine the results and adjust index weights for customized analysis.  
+- The `Select Index` option allows users to view specific values for chosen years.  
+
+**Calculated Field Formula Used:**
 ```bash
 ([Quality of Life Index] * [Quality Idx]) + 
 ([Safety Index] * [Safety_idx]) +
@@ -14,40 +45,108 @@ The goal of this project is to gather and analyze quality-of-life data by countr
 ([Pollution Index] * [Pollution_idx]) -
 ([Cost of Living Index] * [Cost_of_living_Idx])
 ```
-5. ```Sheet name ➔ Top 20  Place where u may not want to Live:``` This figure is about to find the worst country to live (top 20).The previous calculated filed is used in this viz also. Like previous viz, User can select single or miltiple year to find the best places to live, also can adjust the indexes. Users  can also select a index from `Select Index` option to see selected index value for selected year(s).<br>
-6.  ```Sheet name ➔ Country Overview:``` This viz Shows value for every indexes over time. User can select year(s) and countries from drop-down to see the pattern in a line chart among countries.<br>
-7. ```Sheet name ➔ Asian countries Trend over time on different Index:``` Shows value of diffrenet indexes over time for `Asian countries`. User can select year(s) to find the pattern for indexes over time.<br>
-8. ```Sheet name ➔ Europian countries Trend over time on different Index:``` Shows value of diffrenet indexes over time for `Europian countries`. User can select year(s) to find the pattern for indexes over time.<br>
-9. ```Sheet name ➔ Top 50 Quality of life index Countries Pollution and Traffic Commute time Heatmap:``` Top 50 countries filltered from this heatmap. Setting relation between `Pollution Index` and `Quality of life Index`. sized by `Pollution Index` and colored by `Quality of life Index` <br>
-#### All insights are presented in an interactive and user-friendly Tableau sheets and dashboards, which can be accessed here: [Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/md.shoaib.akther.asif/viz/Capstone_project_1_17378065386910/World-wideviewforselectedindex)
-### Findings:
-1. ***For (Year = All)*** <br>From ```Sheet name ➔ Correlation with quality of life:``` The `Quality of Life Index` positively correlates with the `Purchasing Power Index` and `Cost of Living Index`, and a strongly negative correlation with the `Pollution Index`.<br>
+### 5. **Top 20 Places You May Not Want to Live**
+This sheet identifies the 20 worst countries to live in using the same calculated field as the "Top 20 Best Places to Live" sheet.  
+- Users can select single or multiple years and adjust index weights for customized analysis.  
+- The `Select Index` option allows users to view specific index values for the chosen years.
 
-2. From ```Sheet name ➔ :Top 20 Best Place to Live```<br>***For (Year = 2025) setting all index max*** <br> The best country to live with was **`Netherland`** with `Quality of life index` value `211.30`. <br>***For (Year = All)***<br> The best country to live with was **`Finland`**<br>
+---
 
-3. From ```Sheet name ➔ :Top 20  Place where u may not want to Live:``` <br>***For (Year = All and Year = 2025 ) & setting all index max***<br> **`Nigeria`** was the worst country to live in, with a `Quality of Life Index` never exceeding 60.<br>
+### 6. **Country Overview**
+A line chart showcasing the values of all indexes over time for selected countries.  
+- Users can use drop-down menus to select specific countries and year(s) to analyze trends and patterns.
 
-4. From ```Sheet name ➔ Asian countries Trend over time on different Index:``` ***For (Year = All)*** <br> Among Asian countries, the higest countries for different indexes was: <br>  `Quality of life index` ➔ `Oman` with an average value of `182.3` <br> `Cost of living Index` ➔ `Hong Kong(china)` and `Singapore` with an average value of `79.44` and `82.49` <br> `Puchasing power Index` ➔ `Qatar`with an average value of `123.3`<br> `Property price to income ratio` ➔ `Hong-Kong` with an average value of`43.4`
-5. From ```Sheet name ➔ Europian countries Trend over time on different Index:``` ***For (Year = All)*** <br> Among Europian countries, the lowest countries for different indexes was: <br>  `Quality of life index` ➔ `Albania` with an average value of `102.4` <br> `Cost of living Index` ➔ `Ukrain`  with an average value of `28.6` <br> `Puchasing power Index` ➔ `Ukraine` with an average value of `33.6`<br> `Property price to income ratio` ➔ `Iceland` with a value `6.47`
-6. From ```Top 50 Quality of life index Countries Pollution and Traffic Commute time Heatmap:``` ***For (Year = 2025)*** <br>Among the top 50 countries, **`Luxembourg`** ranked highest with a `Quality of Life Index` of `220.1` and a `Pollution Index` of `23.3`. Other top countries included **Finland** `(203.8, 11.8)` and **Denmark** `(209.9, 20.6)`.
+---
+
+### 7. **Asian Countries Trend Over Time on Different Indexes**
+This visualization displays trends of various indexes over time for Asian countries.  
+- Users can select year(s) to examine patterns and changes in index values.
+
+---
+
+### 8. **European Countries Trend Over Time on Different Indexes**
+This visualization shows trends of various indexes over time for European countries.  
+- Users can select specific year(s) to analyze the patterns and changes in index values.
+
+---
+
+### 9. **Top 50 Countries: Quality of Life, Pollution, and Traffic Commute Time Heatmap**
+A heatmap focusing on the top 50 countries filtered by their `Quality of Life Index`.  
+- Establishes relationships between the `Pollution Index` and `Quality of Life Index`.  
+- **Bubble size** represents the `Pollution Index`, while **color intensity** reflects the `Quality of Life Index`.
+
+## Findings
+
+### 1. **For (Year = All)**  
+#### Dashboard: *Factors of Quality of Life*  
+- **Upper Left:**  
+  The world map displays the average values of the selected index for all years.  
+
+- **Upper Right:**  
+  We observed the following correlations with the `Quality of Life Index`:  
+  - Positive correlations:  
+    - `Purchasing Power Index` (**Strong**): `0.813728`  
+    - `Cost of Living Index` (**Moderate**): `0.665700`  
+  - Negative correlations:  
+    - `Pollution Index` (**Strong**): `-0.853893`  
+    - `Traffic Commute Time Index` (**Moderate**): `-0.675780`  
+
+- **Lower Left:**  
+  Among **Asian countries**, the highest-ranked countries for various indices were:  
+  - `Quality of Life Index`: **Oman** (`182.3`)  
+  - `Cost of Living Index`: **Singapore** (`82.49`)  
+  - `Purchasing Power Index`: **Qatar** (`123.3`)  
+  - `Pollution Index`: **Lebanon** (`88.46`)  
+  - `Traffic Commute Time Index`: **Sri Lanka** (`59.36`) and **Bangladesh** (`57.22`)  
+
+- **Lower Right:**  
+  Among **European countries**, the highest-ranked countries for various indices were:  
+  - `Quality of Life Index`: **Luxembourg** (`198.48`)  
+  - `Cost of Living Index`: **Norway** (`96.60`)  
+  - `Purchasing Power Index`: **Luxembourg** (`139.8`)  
+  - `Pollution Index`: **North Macedonia** (`80.93`)  
+  - `Traffic Commute Time Index`: **Russia** (`45.3`)  
+
+---
+
+### 2. **For (Year = 2025) with All Indexes Maximized**  
+#### Dashboard: *Country Comparison*  
+- The **best country to live in** was **Netherlands**, with a `Quality of Life Index` value of `211.30`.  
+- The **worst country to live in** was **Nigeria**, where the `Quality of Life Index` never exceeded `60`.  
+- **Heatmap Insights:**  
+  - **Luxembourg** ranked highest with a `Quality of Life Index` of `220.1` and a `Pollution Index` of `23.3`.  
+  - Other top countries included:  
+    - **Finland**: (`203.8`, `11.8`)  
+    - **Denmark**: (`209.9`, `20.6`)  
+
+
+### All insights are presented in an interactive and user-friendly Tableau sheets and dashboards, which can be accessed here: [Interactive Dashboard on Tableau Public]
+
 ## Build From Sources and Run the Selenium Scraper
-1. Clone the repo
-```bash
-git clone : https://github.com/Shoaib-Akther-Asif/Capstone_project_1.git
-```
-2. Intialize and activate virtual environment
-```bash
-virtualenv --no-site-packages  venv
-source venv/bin/activate
-```
-3. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-4. Download Chrome WebDrive from https://chromedriver.chromium.org/downloads
-5. Run the scraper
-```bash
-python Data_scrap/code1.py --chromedriver_path <path_to_chromedriver>
-```
-6.You will get a file named quality_of_life_2016_to_2025.csv containing data from year 2016 to 2025 for all the required fields.
-Alternatively, check my scraped data [Here](https://github.com/Shoaib-Akther-Asif/Capstone_project_1/blob/main/Data_scrap/quality_of_life_2016_to_2025.csv)
+
+### Steps to Get Started:
+
+1. **Clone the Repository, Set Up Environment, and Run the Scraper**
+   - Clone the repository:
+     ```bash
+     git clone https://github.com/Shoaib-Akther-Asif/Capstone_project_1.git
+     ```
+   - Initialize and activate a virtual environment:
+     ```bash
+     virtualenv --no-site-packages venv
+     source venv/bin/activate
+     ```
+   - Install the required dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - Download the compatible version of Chrome WebDriver from the [official website](https://chromedriver.chromium.org/downloads).  
+   - Run the scraper:
+     ```bash
+     python Data_scrap/code1.py --chromedriver_path <path_to_chromedriver>
+     ```
+
+   After completing these steps, you will get a file named `quality_of_life_2016_to_2025.csv` containing data from 2016 to 2025 for all required fields.
+
+2. **Alternatively**  
+   You can check the pre-scraped data [here](https://github.com/Shoaib-Akther-Asif/Capstone_project_1/blob/main/Data_scrap/quality_of_life_2016_to_2025.csv).
