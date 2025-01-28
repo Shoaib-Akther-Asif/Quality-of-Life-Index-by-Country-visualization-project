@@ -119,8 +119,8 @@ A heatmap focusing on the top 50 countries filtered by their `Quality of Life In
     - **Finland**: (`203.8`, `11.8`)  
     - **Denmark**: (`209.9`, `20.6`)  
 
-
-### All insights are presented in an interactive and user-friendly Tableau sheets and dashboards, which can be accessed here: [Interactive Dashboard on Tableau Public]
+### You can check the [Analysis file here](https://colab.research.google.com/drive/14FMUSrk4QUSyd7dLtZfdPpcA6sfFx0d3?usp=sharing).
+### All insights are presented in an interactive and user-friendly Tableau sheets and dashboards, which can be accessed here: [Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/md.shoaib.akther.asif/viz/Capstone_project_1_17378065386910/Factorsofqualityoflife)
 
 ## Build From Sources and Run the Selenium Scraper
 
