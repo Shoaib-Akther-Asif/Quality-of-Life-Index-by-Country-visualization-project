@@ -1,4 +1,4 @@
-# Capstone_project_1
+# Quality of Life Index by Country visualization project
 ## Problem Statement & findings
 The goal of this project is to gather and analyze quality-of-life data by country for 2025, sourced dynamically from the [Numbeo website](https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2025). This project involved scraping the data using Selenium, followed by processing and visualizing it through interactive dashboards in Tableau Public.
 
