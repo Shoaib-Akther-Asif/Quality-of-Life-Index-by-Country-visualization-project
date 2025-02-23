@@ -102,7 +102,7 @@ A heatmap focusing on the top 50 countries filtered by their `Quality of Life In
       - **Denmark**: (`196.10`, `22.81`)  
     - Least `Pollution Index` country was `Finland` with an average value of `12.65`
  --- 
-### You can check the [Analysis file here](https://drive.google.com/drive/folders/1iclRvl1iwMt80xxvAd02UVFXEaWdVnkY?usp=sharing).
+### You can check the [Analysis file here](https://github.com/Shoaib-Akther-Asif/Quality-of-Life-Index-by-Country-visualization-project./tree/main/data).
 ### All insights are presented in an interactive and user-friendly Tableau sheets and dashboards, which can be accessed here: [Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/md.shoaib.akther.asif/viz/Capstone_project_1_17378065386910/Factorsofqualityoflife)
 
 ## Build From Sources and Run the Selenium Scraper
