@@ -1,4 +1,4 @@
-# Quality of Life Index by Country visualization project
+# Country-wise Quality of Life Overview
 ## Problem Statement & findings
 The goal of this project is to gather and analyze quality-of-life data by country for 2025, sourced dynamically from the [Numbeo website](https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2025). This project involved scraping the data using Selenium, followed by processing and visualizing it through interactive dashboards in Tableau Public.
 
@@ -57,7 +57,7 @@ This visualization shows trends of selected indexe over time for European countr
 
 ---
 
-### 7. **Top 20 Quality of life index Countrie's difference indexes Heatmap**
+### 7. **Top 20 Quality of life index Countrie's different indices Heatmap**
 A heatmap focusing on the top 50 countries filtered by their `Quality of Life Index`.  
 - Establishes relationships between the `Quality of Life Index` and selected index by user.  
 - **Bubble size** represents the `Selected index by user`, while **color intensity** reflects the `Quality of Life Index`.
@@ -104,7 +104,8 @@ A heatmap focusing on the top 50 countries filtered by their `Quality of Life In
  --- 
 ### You can check the [Analysis file here](https://github.com/Shoaib-Akther-Asif/Quality-of-Life-Index-by-Country-visualization-project./tree/main/data).
 ### All insights are presented in an interactive and user-friendly Tableau sheets and dashboards, which can be accessed here: [Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/md.shoaib.akther.asif/viz/Capstone_project_1_17378065386910/Factorsofqualityoflife)
-
+**Preview of tableau dashboard:**  
+<img src="raw_tableau_files/tableau_dashboard.png" width="800" height="400">
 ## Build From Sources and Run the Selenium Scraper
 
 ### Steps to Get Started:
