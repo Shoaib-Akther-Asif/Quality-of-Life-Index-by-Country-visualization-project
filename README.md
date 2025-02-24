@@ -1,16 +1,28 @@
 # Country-wise Quality of Life Overview
 ## Problem Statement & findings
 The goal of this project is to gather and analyze quality-of-life data by country for 2025, sourced dynamically from the [Numbeo website](https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2025). This project involved scraping the data using Selenium, followed by processing and visualizing it through interactive dashboards in Tableau Public.
+## Data Collection 
+A total of 761 data points were collected, covering the following indices:
+  - Quality of Life Index
+  - Safety Index
+  - Healthcare Index
+  - Pollution Index
+  - Purchasing Power Index
+  - Cost of Living Index
+  - Traffic Commute Time Index
+  - Property Price to Income Ratio
+  - Climate Index
 
-### **Goals of This Project**
+The data spans the years 2016 to 2025, enabling a comparison of trends over time.
 
+## **Goals of This Project**
 1. Provide a comprehensive global perspective on various quality-of-life indices.  
 2. Identify key factors influencing the `Quality of Life Index`.  
 3. Compare different indices to determine the best country for living.  
 4. Analyze patterns of quality-of-life-related indices across different continents.  
-5. Create a heatmap to visually represent the best countries to live in.  
+5. Find top countries according to selected indexe  
 
-### The following key insights and analyses were derived using the data and presented through the Tableau Dashboard:
+## The following key insights and analyses were derived using the data and presented through the Tableau Dashboard:
 ## Describing Tableau Dashboard:
 
 ### 1. **World-wide View for Selected Index**
@@ -57,15 +69,17 @@ This visualization shows trends of selected indexe over time for European countr
 
 ---
 
-### 7. **Top 20 Quality of life index Countrie's different indices Heatmap**
-A heatmap focusing on the top 50 countries filtered by their `Quality of Life Index`.  
-- Establishes relationships between the `Quality of Life Index` and selected index by user.  
-- **Bubble size** represents the `Selected index by user`, while **color intensity** reflects the `Quality of Life Index`.
+### 7. Top Countries by Selected Index   
+This graph provides a **wide-scale analysis** of the **top 40 countries** based on the **average value** of the selected index for the chosen year(s). The goal is to offer insights into global rankings across key indicators, helping to understand how different nations perform in various domains. 
+- Key Features  
+  - **Comprehensive Rankings**  
+  - **Yearly Comparisons** 
+  - **Visual Representations**
 
 ## Findings:
 
 ### **For (Year = All)**  
-#### Dashboard: *Capstone_project_1*    
+#### Dashboard: *Country-wise Quality of Life Overview*    
   - The world map displays the average values of the selected index for all years.
 ---
   - Among **Asian countries**, the top-ranking nations, based on the average value of various indices, were:  
@@ -81,7 +95,7 @@ A heatmap focusing on the top 50 countries filtered by their `Quality of Life In
     - `Cost of Living Index`: **Norway** (`96.60`)  
     - `Purchasing Power Index`: **Luxembourg** (`139.8`)  
     - `Pollution Index`: **North Macedonia** (`80.93`)  
-    - `Healthcare Index`: **Taiwan** (`85.90`)  
+    - `Healthcare Index`: **Austria** (`78.22`)  
     - `Traffic Commute Time Index`:**Russia**(`45.68`)
 ---
   We observed the following correlations with the `Quality of Life Index`:  
@@ -95,17 +109,31 @@ A heatmap focusing on the top 50 countries filtered by their `Quality of Life In
 - **With All Indexes Maximized**    
   - The **best country to live in** was **Finland**, with an average `Quality of Life Index` value of `189.89`.  
   - The **worst country to live in** was **Nigeria**, where the average `Quality of Life Index` value of  `44.53`.  
-  - **Heatmap Insights:**  
-    - **Luxembourg** ranked highest with an average `Quality of Life Index` value of `198.48` and `Pollution Index` value of `22.73`.  
-    - Other top countries included:  
-      - **Switzerland**: (`193.21`, `21.58`)  
-      - **Denmark**: (`196.10`, `22.81`)  
-    - Least `Pollution Index` country was `Finland` with an average value of `12.65`
- --- 
-### You can check the [Analysis file here](https://github.com/Shoaib-Akther-Asif/Quality-of-Life-Index-by-Country-visualization-project./tree/main/data).
-### All insights are presented in an interactive and user-friendly Tableau sheets and dashboards, which can be accessed here: [Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/md.shoaib.akther.asif/viz/Capstone_project_1_17378065386910/Factorsofqualityoflife)
+--- 
+Top Countries by Selected Indices  
+Based on average index values, the highest-ranking countries across selected indices are:  
+  - **Quality of Life Index** → **Luxembourg** (`198.48`)  
+    - Recognized for its high living standards, economic stability, and strong infrastructure.  
+  - **Safety Index** → **Qatar** (`85.63`)  
+    - A nation with low crime rates, high security, and a stable environment.  
+  - **Healthcare Index** → **Taiwan (China)** (`85.90`)  
+    - Known for its efficient, high-quality, and accessible healthcare system.  
+  - **Pollution Index** → **Lebanon** (`88.46`) *(Higher value = More pollution)*  
+    - Indicates significant environmental and air quality challenges.  
+  - **Purchasing Power Index** → **Luxembourg** (`139.78`)  
+    - A reflection of high income levels and strong financial capacity of residents.  
+  - **Cost of Living Index** → **Switzerland** (`120.00`)  
+    - One of the most expensive places to live, driven by high wages and living expenses.  
+  - **Traffic Commute Time Index** → **Nigeria** (`62.80`) *(Higher value = Longer commute time)*  
+    - Reflects significant traffic congestion and long daily commutes. 
+---
+
+### All insights are presented in an interactive and user-friendly Tableau sheets and dashboards, which can be accessed here: [Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/md.shoaib.akther.asif/viz/Country-wiseQualityofLifeOverview/QualityofLifeIndexbyCountryvisualizationproject)
 **Preview of tableau dashboard:**  
 <img src="raw_tableau_files/tableau_dashboard.png" width="800" height="400">
+
+### You can check the [Analysis file here](https://github.com/Shoaib-Akther-Asif/Country-wise-Quality-of-Life-Overview/blob/main/preprocessing.ipynb).
+
 ## Build From Sources and Run the Selenium Scraper
 
 ### Steps to Get Started:
@@ -113,7 +141,7 @@ A heatmap focusing on the top 50 countries filtered by their `Quality of Life In
 1. **Clone the Repository, Set Up Environment, and Run the Scraper**
    - Clone the repository:
      ```bash
-     git clone https://github.com/Shoaib-Akther-Asif/Capstone_project_1.git
+     git clone https://github.com/Shoaib-Akther-Asif/Country-wise-Quality-of-Life-Overview.git
      ```
    - Initialize and activate a virtual environment:
      ```bash
@@ -133,4 +161,17 @@ A heatmap focusing on the top 50 countries filtered by their `Quality of Life In
    After completing these steps, you will get a file named `quality_of_life_2016_to_2025.csv` containing data from 2016 to 2025 for all required fields.
 
 2. **Alternatively**  
-   You can check the pre-scraped data [here](https://github.com/Shoaib-Akther-Asif/Capstone_project_1/blob/main/Data_scrap/quality_of_life_2016_to_2025.csv).
+   You can check the [pre-scraped data here](https://github.com/Shoaib-Akther-Asif/Country-wise-Quality-of-Life-Overview/blob/main/data/scraped_data.csv).
+
+# License  
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.  
+
+# Contact  & Contributions
+We welcome contributions! Feel free to fork the repository and submit a pull request.
+For any inquiries or collaborations:   
+- **GitHub:** [GitHub](https://github.com/Shoaib-Akther-Asif)  
+- **LinkedIn:** [Linkedin](https://www.linkedin.com/in/shoaib-akther-asif/)  
+- **Email:** shoaibaktherasif@gmail.com  
+
+⭐ **Star this repo** if you find it useful!  
+
