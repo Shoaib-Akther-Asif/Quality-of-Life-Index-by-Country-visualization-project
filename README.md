@@ -20,7 +20,7 @@ The data spans the years 2016 to 2025, enabling a comparison of trends over time
 2. Identify key factors influencing the `Quality of Life Index`.  
 3. Compare different indices to determine the best country for living.  
 4. Analyze patterns of quality-of-life-related indices across different continents.  
-5. Find top countries according to selected indexe  
+5. Find top countries according to selected indexes.  
 
 ## The following key insights and analyses were derived using the data and presented through the Tableau Dashboard:
 ## Describing Tableau Dashboard:
